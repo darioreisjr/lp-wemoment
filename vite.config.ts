@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  appType: "spa", // Adicionado para lidar com o roteamento de SPA
   server: {
     host: "::",
     port: 8080,
