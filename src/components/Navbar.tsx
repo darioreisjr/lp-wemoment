@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,22 +15,14 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setIsOpen(false);
-    }
-  };
-
   const navItems = [
-    { label: "Início", id: "hero" },
-    { label: "Problema", id: "problem" },
-    { label: "Solução", id: "solution" },
-    { label: "Recursos", id: "features" },
-    { label: "Preços", id: "pricing" },
-    { label: "FAQ", id: "faq" },
-    { label: "Sobre", id: "about" },
+    { label: "Início", path: "/inicio" },
+    { label: "Problema", path: "/problema" },
+    { label: "Solução", path: "/solucao" },
+    { label: "Recursos", path: "/recursos" },
+    { label: "Preços", path: "/precos" },
+    { label: "FAQ", path: "/faq" },
+    { label: "Sobre", path: "/sobre" },
   ];
 
   return (
@@ -41,28 +34,26 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <button
-            onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-2 group"
-          >
+          <Link to="/" className="flex items-center gap-2 group">
             <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
               <Heart className="w-6 h-6 text-white fill-white" />
             </div>
             <span className="text-xl font-black gradient-text hidden sm:block">
               WeMoment
             </span>
-          </button>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
+              <Link
+                key={item.path}
+                to={item.path}
                 className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted/50 rounded-lg transition-all"
+                onClick={() => setIsOpen(false)}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -91,13 +82,14 @@ export const Navbar = () => {
           <div className="md:hidden glass-card rounded-2xl mt-2 mb-4 py-4 animate-fade-in">
             <div className="flex flex-col gap-1">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                <Link
+                  key={item.path}
+                  to={item.path}
                   className="px-4 py-3 text-left text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted/50 rounded-lg transition-all"
+                  onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
               <div className="px-4 pt-2">
                 <Button variant="hero" size="sm" className="w-full">
