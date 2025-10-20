@@ -130,7 +130,9 @@ export const Pricing = () => {
             </ul>
           </CardContent>
           <CardFooter>
-            <Button className="w-full bg-primary hover:bg-primary/90">Assinar Premium</Button>
+            <Button className="w-full" disabled>
+              Em breve
+            </Button>
           </CardFooter>
         </Card>
 
@@ -177,7 +179,9 @@ export const Pricing = () => {
             </ul>
           </CardContent>
           <CardFooter>
-            <Button variant="outline" className="w-full">Planejar uma Viagem</Button>
+            <Button variant="outline" className="w-full" disabled>
+              Em breve
+            </Button>
           </CardFooter>
         </Card>
       </div>
