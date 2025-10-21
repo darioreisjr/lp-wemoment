@@ -1,8 +1,12 @@
 import { Heart, Shield, Sparkles, Users } from "lucide-react";
+import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/config/seo";
 
 export const About = () => {
   return (
-    <section id="about" className="py-20 md:py-32 relative overflow-hidden bg-muted/30">
+    <>
+      <SEO config={getSEOConfig('about')} path="/about" />
+      <section id="about" className="py-20 md:py-32 relative overflow-hidden bg-muted/30">
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-20 w-2 h-2 gradient-primary rounded-full animate-float opacity-60"></div>
@@ -93,6 +97,7 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };

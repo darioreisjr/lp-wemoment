@@ -3,6 +3,8 @@ import { LayoutDashboard, CalendarRange, Heart } from "lucide-react";
 import dashboardImg from "@/assets/feature-dashboard.jpg";
 import calendarImg from "@/assets/feature-calendar.jpg";
 import wishlistImg from "@/assets/feature-wishlist.jpg";
+import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/config/seo";
 
 const features = [
   {
@@ -30,7 +32,9 @@ const features = [
 
 export const Features = () => {
   return (
-    <section id="features" className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-b from-background via-muted/20 to-background">
+    <>
+      <SEO config={getSEOConfig('features')} path="/features" />
+      <section id="features" className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-b from-background via-muted/20 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-black gradient-text mb-6">
@@ -75,6 +79,7 @@ export const Features = () => {
           ))}
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };

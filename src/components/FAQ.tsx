@@ -5,6 +5,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { HelpCircle } from "lucide-react";
+import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/config/seo";
 
 export const FAQ = () => {
   const faqs = [
@@ -51,7 +53,9 @@ export const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 md:py-32 relative overflow-hidden">
+    <>
+      <SEO config={getSEOConfig('faq')} path="/faq" />
+      <section id="faq" className="py-20 md:py-32 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-float"></div>
@@ -103,6 +107,7 @@ export const FAQ = () => {
           </p>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };

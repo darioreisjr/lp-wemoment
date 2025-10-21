@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/config/seo";
 
 export const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <>
+      <SEO config={getSEOConfig('home')} path="/home" />
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -57,6 +61,7 @@ export const Hero = () => {
 
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-    </section>
+      </section>
+    </>
   );
 };
