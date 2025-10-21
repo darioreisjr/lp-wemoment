@@ -1,5 +1,7 @@
 import { Camera, Calendar, Plane, FileText } from "lucide-react";
 import problemBg from "@/assets/problem-chaos.jpg";
+import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/config/seo";
 
 const problems = [
   { icon: Camera, label: "Fotos perdidas" },
@@ -10,7 +12,9 @@ const problems = [
 
 export const Problem = () => {
   return (
-    <section id="problem" className="py-20 md:py-32 relative overflow-hidden">
+    <>
+      <SEO config={getSEOConfig('problem')} path="/problem" />
+      <section id="problem" className="py-20 md:py-32 relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background"></div>
       
@@ -56,6 +60,7 @@ export const Problem = () => {
           ))}
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };

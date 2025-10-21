@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Sparkles } from "lucide-react";
 import solutionBg from "@/assets/solution-organized.jpg";
+import SEO from "@/components/SEO";
+import { getSEOConfig } from "@/config/seo";
 
 export const Solution = () => {
   return (
-    <section id="solution" className="py-20 md:py-32 relative overflow-hidden">
+    <>
+      <SEO config={getSEOConfig('solution')} path="/solution" />
+      <section id="solution" className="py-20 md:py-32 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 gradient-primary rounded-full blur-3xl opacity-20 animate-pulse"></div>
@@ -75,6 +79,7 @@ export const Solution = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };

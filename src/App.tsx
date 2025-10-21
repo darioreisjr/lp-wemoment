@@ -13,12 +13,14 @@ import { Pricing } from "./components/Pricing";
 import { FAQ } from "./components/FAQ";
 import { About } from "./components/About";
 import { Navbar } from "./components/Navbar";
+import { OrganizationSchema } from "./components/OrganizationSchema";
 
 const queryClient = new QueryClient();
 
 const Layout = () => {
   return (
     <>
+      <OrganizationSchema />
       <Navbar />
       <Outlet />
     </>
