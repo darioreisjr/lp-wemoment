@@ -9,6 +9,11 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    historyApiFallback: true, // Redireciona todas as rotas para index.html em desenvolvimento
+  },
+  preview: {
+    port: 8080,
+    historyApiFallback: true, // Redireciona todas as rotas para index.html em preview
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
