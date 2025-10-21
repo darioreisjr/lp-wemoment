@@ -16,13 +16,13 @@ export const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Início", path: "/inicio" },
-    { label: "Problema", path: "/problema" },
-    { label: "Solução", path: "/solucao" },
-    { label: "Recursos", path: "/recursos" },
-    { label: "Preços", path: "/precos" },
+    { label: "Início", path: "/home" },
+    { label: "Problema", path: "/problem" },
+    { label: "Solução", path: "/solution" },
+    { label: "Recursos", path: "/features" },
+    { label: "Preços", path: "/pricing" },
     { label: "FAQ", path: "/faq" },
-    { label: "Sobre", path: "/sobre" },
+    { label: "Sobre", path: "/about" },
   ];
 
   return (

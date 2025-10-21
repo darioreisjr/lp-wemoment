@@ -34,13 +34,13 @@ const App = () => (
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Hero />} />
-            <Route path="/inicio" element={<Hero />} />
-            <Route path="/problema" element={<Problem />} />
-            <Route path="/solucao" element={<Solution />} />
-            <Route path="/recursos" element={<Features />} />
-            <Route path="/precos" element={<Pricing />} />
+            <Route path="/home" element={<Hero />} />
+            <Route path="/problem" element={<Problem />} />
+            <Route path="/solution" element={<Solution />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/sobre" element={<About />} />
+            <Route path="/about" element={<About />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
