@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Heart, Menu, X } from "lucide-react";
+import { Heart, Menu, X, User } from "lucide-react"; // Importado o ícone User
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -57,10 +57,19 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="hero" size="sm" className="shadow-lg">
-              Começar grátis
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-2">
+            <Button variant="hero" size="sm" className="shadow-lg rounded-sm uppercase"> {/* Borda quadrada e uppercase */}
+              Começar Gratuitamente
+            </Button>
+            {/* Botão Entrar com ícone User, borda quadrada, uppercase e hover gradiente rosa */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="shadow-lg rounded-sm uppercase border-primary text-primary hover:bg-gradient-to-r hover:from-secondary hover:to-pink-500 hover:text-secondary-foreground hover:border-transparent transition-all duration-300" /* Alterado para rounded-sm, uppercase e hover gradiente rosa */
+            >
+              <User className="mr-1 h-4 w-4" /> {/* Reduzido mr-2 para mr-1 */}
+              Entrar
             </Button>
           </div>
 
@@ -91,9 +100,18 @@ export const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
-              <div className="px-4 pt-2">
-                <Button variant="hero" size="sm" className="w-full">
-                  Começar grátis
+              <div className="px-4 pt-2 space-y-2">
+                <Button variant="hero" size="sm" className="w-full rounded-sm uppercase"> {/* Borda quadrada e uppercase */}
+                  Começar Gratuitamente
+                </Button>
+                {/* Botão Entrar com ícone User, borda quadrada, uppercase e hover gradiente rosa no mobile */}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full rounded-sm uppercase border-primary text-primary hover:bg-gradient-to-r hover:from-secondary hover:to-pink-500 hover:text-secondary-foreground hover:border-transparent transition-all duration-300" /* Alterado para rounded-sm, uppercase e hover gradiente rosa */
+                >
+                  <User className="mr-1 h-4 w-4" /> {/* Reduzido mr-2 para mr-1 */}
+                  Entrar
                 </Button>
               </div>
             </div>
