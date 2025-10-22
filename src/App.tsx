@@ -8,12 +8,12 @@ import { Hero } from "./components/Hero";
 import { Problem } from "./components/Problem";
 import { Solution } from "./components/Solution";
 import { Features } from "./components/Features";
-import { Testimonials } from "./components/Testimonials";
 import { Pricing } from "./components/Pricing";
 import { FAQ } from "./components/FAQ";
 import { About } from "./components/About";
 import { Navbar } from "./components/Navbar";
 import { OrganizationSchema } from "./components/OrganizationSchema";
+import WhatsAppButton from "./components/WhatsAppButton"
 
 const queryClient = new QueryClient();
 
@@ -47,6 +47,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <WhatsAppButton />
     </TooltipProvider>
   </QueryClientProvider>
 );
