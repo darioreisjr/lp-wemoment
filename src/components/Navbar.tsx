@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Heart, Menu, X, User } from "lucide-react"; // Importado o ícone User
+import { Menu, X, User } from "lucide-react"; // Importado o ícone User
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
+import logo from "@/assets/Logo.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +35,12 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Heart className="w-6 h-6 text-white fill-white" />
-            </div>
+          <Link to="/" className="flex items-center gap-2 group">
+            <img src={logo} alt="WeMoment Logo" className="w-[50px] h-[50px]" />
             <span className="text-xl font-black gradient-text hidden sm:block">
               WeMoment
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-1">
