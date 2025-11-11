@@ -2,6 +2,9 @@
 
 Bem-vindo ao repositório da **WeMoment**, uma landing page moderna criada para apresentar um super app que ajuda casais a organizarem compromissos, sonhos e memórias em um único lugar. O projeto combina performance, SEO avançado, storytelling envolvente e uma experiência visual rica construída sobre um design system próprio.
 
+<img width="1906" height="911" alt="image" src="https://github.com/user-attachments/assets/c2728375-3ec6-4f54-92e5-ec741da3bed8" />
+
+
 ## ✨ Principais Recursos
 
 - **Navegação completa por seções**: Hero, Problem, Solution, Features, Pricing, FAQ, About, Testimonials e chamada final para ação.
